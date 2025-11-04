@@ -61,17 +61,22 @@ print('\n')
 #loop de validação de materia
 while True:
     while True:
-        escolha_materia = input("""Escolha a disciplina que será cadastrada de acordo com sua numeração: 
+        escolha_materia = input(f"""Escolha a disciplina que será cadastrada de acordo com sua numeração: 
                                     0 - ENGENHARIA DE SOFT AGIL
                                     1 - PYTHON
                                     2 - C
                                     3 - ANALISE DE PROJETOS
+                                    99 - {NEGRITO}{VERMELHO}SAIR DO PROGRAMA{RESET}
                                     >>> """)
         if escolha_materia in opcoes_materias:
             dicion['materia'] = opcoes_materias[escolha_materia]
             break
+        elif escolha_materia == '99':
+            break
         else:
             print(f'{VERMELHO}Por favor, selecione uma das matérias válidas.{RESET}')
+    if escolha_materia == '99':
+        break
     
 #loop de dados necessários para o cadastro do aluno 
     print('\n')
@@ -81,16 +86,19 @@ while True:
             dicion['ra'] = input('Cadastre o RA: ').upper()
             dicion['turma'] = input('Cadastre a turma: ').upper()
             print(f'{ITALICO}{NEGRITO}{dicion['nome']}, {dicion['ra']}, {dicion['turma']}{RESET}')
-            
-            resp = input(f'{VERDE}Confere os dados? [S/N]: {RESET}').lower()
+            while True:
+                resp = input(f'{VERDE}Confere os dados? [S/N]: {RESET}').lower()
+                if resp == 's':
+                    break
+                elif resp == 'n':
+                    dicion.clear()
+                    dicion['materia'] = opcoes_materias[escolha_materia]
+                    break
+                else:
+                    print(f'{VERMELHO}Opção inválida.{RESET}')
             if resp == 's':
                 break
-            elif resp == 'n':
-                dicion.clear()
-                break
-            else:
-                print(f'{VERMELHO}Opção inválida.{RESET}')
-        if resp == 's':
+        if resp =='s':
             break
 
    

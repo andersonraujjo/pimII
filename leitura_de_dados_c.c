@@ -33,7 +33,7 @@ void converter_para_upper(char* s){
 void carregarCSV() {
     FILE *file = fopen("alunos.csv", "r");
     if (file == NULL) {
-        printf("Erro: não foi possivel abrir o arquivo alunos.csv.\n");
+        printf("Erro: nao foi possivel abrir o arquivo.\n");
         return;
     }
 
