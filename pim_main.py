@@ -1,5 +1,3 @@
-#testee
-
 from time import sleep
 #para verificar a existencia do arquivo csv posteriormente
 import os
@@ -84,7 +82,7 @@ while True:
     print('\n')
     while True:
         while True:
-            dicion['nome'] = input('Cadastre o nome do aluno: ')
+            dicion['nome'] = input('Cadastre o nome do aluno: ').upper()
             dicion['ra'] = input('Cadastre o RA: ').upper()
             dicion['turma'] = input('Cadastre a turma: ').upper()
             print(f'{ITALICO}{NEGRITO}{dicion['nome']}, {dicion['ra']}, {dicion['turma']}{RESET}')
