@@ -29,8 +29,8 @@ void carregarCSV() {
         return;
     }
 
-    char linha[MAX_LINHA];// armazena o texto bruto de cada linha armazenando no vetor (linha)
-    fgets(linha, sizeof(linha), file); // pula o cabeçalho
+    char linha[MAX_LINHA];// armazena o texto bruto de cada linha armazenando no vetor 
+    fgets(linha, sizeof(linha), file); // pula o cabeçalho, le a linha e nao faz nada com ela
 
     while (fgets(linha, sizeof(linha), file)) {
         Aluno a;
@@ -46,7 +46,7 @@ void carregarCSV() {
 }
 
 
-// vetor para mapear a escolha numérica para o nome da matéria no CSV
+// vetor de ponteiros para mapear a escolha numérica para o nome da matéria no CSV
 char* materias_mapa[] = {
     "ENGENHARIA DE SOFT AGIL", // 0
     "PYTHON",                 // 1
@@ -60,7 +60,7 @@ char* materias_mapa[] = {
 //função para definir escolhas por materia
 int selecao_materias(){
      int selecao_materia;
-    
+    //while 1 loop infinito
     while (1) { 
         printf("\nSelecione a materia a ser mostrada: \n");
         printf("\n0 - %s\n", materias_mapa[0]);
@@ -70,7 +70,7 @@ int selecao_materias(){
         printf("99 - Voltar ao menu principal");
         printf("\n>>>> ");
 
-        if (scanf("%d", &selecao_materia) != 1) {
+        if (scanf("%d", &selecao_materia) != 1) { //scanf retorna 1 para 1 item lido, se divergir cai no else
             while (getchar() != '\n' && !feof(stdin)); //limpa buffer do teclado
             selecao_materia = -1;
         }
@@ -144,7 +144,7 @@ void listarAlunos() {
 
     // Roda um loop no vetor alunos para calcular e imprimir
     for (int i = 0; i < totalRegistros; i++) {
-        const char *status;
+        const char *status; // const char imutavel
         
         // Determina o status
         if (alunos[i].media >= 7.0) {
@@ -172,9 +172,16 @@ void buscarPorRA() {
     for (int i = 0; i < totalRegistros; i++) {
         if (strcmp(alunos[i].ra, raBusca) == 0) {
             printf("\n-----------------\nAluno encontrado:\n");
-            printf("Materia: %s\nNome: %s\nRA: %s\nTurma: %s\nNotas: %.1f, %.1f\nMedia: %.2f\n",
+            
+            // Determina o status de aprovado / reprovado
+            const char *status; // const char > imutavel
+            if (alunos[i].media >= 7.0) {
+            status = "APROVADO";} 
+            else {status = "REPROVADO";}
+
+            printf("Materia: %s\nNome: %s\nRA: %s\nTurma: %s\nNotas: %.1f, %.1f\nMedia: %.2f\nStatus: %s\n",
                    alunos[i].materia, alunos[i].nome, alunos[i].ra, alunos[i].turma,
-                   alunos[i].nota1, alunos[i].nota2, alunos[i].media);
+                   alunos[i].nota1, alunos[i].nota2, alunos[i].media,status);
             encontrado = 1; //roda o for no vetor alunos e printa os dados em sequencia
         }
     }
@@ -184,7 +191,7 @@ void buscarPorRA() {
     }
 }
 
-// Função para lsitar a qtd de aprovados e reprovados (geral, todas as materias)
+// Função para listar a qtd de aprovados e reprovados (geral, todas as materias)
 void relatorioAprovacao() {
     printf("\nRELACAO DE APROVADOS / REPROVADOS (GERAL) \n");
     printf("----------------------------------------\n");
@@ -194,7 +201,6 @@ void relatorioAprovacao() {
     int reprovados_cont = 0;
 
     for (int i = 0; i < totalRegistros; i++) {
-        const char *status;
         
         // Verifica a condição de aprovação
         if (alunos[i].media >= 7.0) {
@@ -248,9 +254,9 @@ int main() {
             case 4:
             {int selecao = selecao_materias();            
             if (selecao >= 0 && selecao < NUM_OPCOES_MATERIA) 
-            {listarPorMateria(materias_mapa[selecao]);} 
+                {listarPorMateria(materias_mapa[selecao]);} //chama a função listar p materia passando o materias mapa como argumento na posição selecionada
             else if (selecao == 99) 
-            {printf("Retornando ao menu principal.\n");}
+                {printf("Retornando ao menu principal.\n");}
             }
             break;
 
