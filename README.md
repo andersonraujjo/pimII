@@ -1,4 +1,1 @@
-PROJETO ACADEMICO MULTIDISCIPLINAR ENVOLVENDO DUAS LINGUAGENS DE PROGRAMAÇÃO, C E PYTHON.
-O OBJETIVO DO TRABALHO É CRIAR UM SISTEMA COLABORATVO ONDE OS DADOS SERÃO MANIPULADOS EM PYTHON PARA POSTERIORMENTE SEREM LIDOS E EXIBIDOS EM C.
-O PROJETO TRATA-SE DE GERENCIAMENTO DE NOTAS E SEUS RESPECTIVOS ALUNOS DE DETERMINADA INSTITUIÇÃO DE ENSINO, VISANDO A SUBSTITUIÇÃO DE MEIOS TRADICIONAIS DE CONTROLE DE NOTAS PARA UMA SOLUÇÃO MAIS EFICAZ, 
-MODERNA E AMBIENTALISTA.
+projeto academico multidisciplinar envolvendo duas linguagens de programação, c e python. o objetivo do trabalho é criar um sistema colaborativo onde os dados serão manipulados em python para posteriormente serem lidos e exibidos em c. o projeto trata-se de gerenciamento de notas e seus respectivos alunos de determinada instituição de ensino, visando a substituição de meios tradicionais de controle de notas para uma solução mais eficaz, moderna e ambientalista.
