@@ -1,21 +1,27 @@
-# 🐍 Exercícios de Python - Trilha de Aprendizado
+# 🎓 Sistema Colaborativo de Gestão Acadêmica (C & Python)
 
-Este repositório é um registro prático da minha jornada inicial na programação utilizando **Python**. O foco principal aqui foi a fixação de conceitos básicos e a execução lógica de problemas propostos durante as aulas.
+Projeto acadêmico multidisciplinar desenvolvido para modernizar o gerenciamento de notas e alunos, substituindo controles físicos por uma solução digital eficaz e ambientalista.
 
-## 📈 Evolução Técnica e Amadurecimento
-Como este é um registro do meu **começo na trilha de desenvolvimento**, é importante notar:
-- **Fase Inicial (Mundo 1 e 2):** Fundamentos de *Clean Code* e nomenclaturas rigorosas de variáveis foram aplicados de forma minimizada, priorizando o entendimento da sintaxe e a resolução dos desafios.
-- **Fase Avançada (Mundo 3):** No estágio final do curso (ministrado pelo Prof. Guanabara), é possível observar uma clara curva de **evolução técnica**. Os programas desta fase demonstram um maior amadurecimento na escrita do código, organização de funções e estrutura de dados.
+## 🚀 O Projeto
+O sistema opera de forma colaborativa entre duas linguagens, explorando o melhor de cada uma para otimizar o fluxo de dados escolares:
 
-## 🗂️ O que foi praticado:
-- **Fundamentos:** Tipos primitivos, operadores aritméticos e módulos.
-- **Estruturas de Controle:** Condicionais (`if/else`) e repetições (`for/while`).
-- **Estruturas Compostas:** Listas, Tuplas, Dicionários, Funções e Tratamento de Erros.
+- **Python:** Responsável pela manipulação, tratamento e persistência dos dados (entrada de informações).
+- **C:** Responsável pela leitura de baixo nível e exibição performática dos dados processados.
 
-## 🛠️ Tecnologias Utilizadas
-- **Linguagem:** Python 3.x
-- **Ambiente:** VS Code / Terminal
-- **Versionamento:** Git & GitHub
+## 🎯 Objetivos
+- **Eficácia:** Agilizar o controle de notas e registros de alunos.
+- **Sustentabilidade:** Reduzir o uso de papel, promovendo uma alternativa 100% digital.
+- **Interoperabilidade:** Demonstrar a integração técnica entre linguagens de alto e baixo nível.
+
+## 🛠️ Tecnologias
+- **Linguagem Python:** Processamento e lógica de entrada de dados.
+- **Linguagem C:** Interface de visualização e leitura eficiente.
+- **Armazenamento:** Estrutura de arquivos compatível para leitura mútua.
+
+## 📁 Estrutura de Funcionamento
+1. O módulo em **Python** realiza o cadastro de alunos e notas.
+2. Os dados são salvos em um formato comum.
+3. O módulo em **C** acessa esses registros e exibe relatórios detalhados para o usuário.
 
 ---
-*Este repositório serve como base histórica para consulta e acompanhamento da minha evolução constante na área de ADS.*
+*Trabalho desenvolvido como parte da grade curricular de ADS.*
