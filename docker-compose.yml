@@ -1,0 +1,14 @@
+services:
+  cadastro_python:
+    build: ./python_app
+    stdin_open: true # Permite entrada do teclado
+    tty: true        # Emula um terminal
+    volumes:
+      - ./python_app/dados:/app/dados
+
+  gerador_c:
+    build: ./c_app
+    stdin_open: true # Permite entrada do teclado
+    tty: true        # Emula um terminal
+    volumes:
+      - ./python_app/dados:/app/output
